@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "BigRedButton": "scripts/BigRedButton",
-    "install": "prebuild --download https://github.com/NodeOS/nodeos-cross-toolchain/releases/download/v{version}/{platform}-{arch}.tar.gz",
+    "install": "prebuild --download https://github.com/NodeOS/genfatfs/releases/download/v{version}/{platform}-{arch}.tar.gz",
     "start": "./genfatfs"
   },
   "repository": {
