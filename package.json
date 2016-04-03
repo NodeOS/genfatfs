@@ -1,12 +1,13 @@
 {
   "name": "genfatfs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "fat filesystem generator for embedded systems",
   "bin": "genfatfs",
   "main": "index.js",
   "scripts": {
     "BigRedButton": "scripts/BigRedButton",
-    "install": "prebuild --download https://github.com/NodeOS/nodeos-cross-toolchain/releases/download/v{version}/{platform}-{arch}.tar.gz"
+    "install": "prebuild --download https://github.com/NodeOS/nodeos-cross-toolchain/releases/download/v{version}/{platform}-{arch}.tar.gz",
+    "start": "./genfatfs"
   },
   "repository": {
     "type": "git",
