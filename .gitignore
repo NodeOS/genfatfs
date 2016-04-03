@@ -10,6 +10,5 @@
 *.lai
 *.la
 *.a
-genfatfs
 node_modules/
 prebuilds/
