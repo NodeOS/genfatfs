@@ -1,0 +1,49 @@
+#!/usr/bin/env sh
+
+#
+# Build genfatfs
+#
+
+make || exit 1
+
+#
+# Pack genfatfs in a node-gyp compatible way
+#
+
+OS="`uname`"
+case $OS in
+  'Linux')     PLATFORM=linux   ;;
+  'FreeBSD')   PLATFORM=freebsd ;;
+  'WindowsNT') PLATFORM=win     ;;
+  'Darwin')    PLATFORM=mac     ;;
+  'SunOS')     PLATFORM=solaris ;;
+  'AIX')       PLATFORM=linux   ;;
+
+  *)
+    echo Unknown OS "$OS"
+    exit 2
+  ;;
+esac
+
+MACHINE="`uname -m`"
+case $MACHINE in
+  'x86_64') ARCH=x64 ;;
+
+  *)
+    echo Unknown MACHINE "$MACHINE"
+    exit 3
+  ;;
+esac
+
+
+
+mkdir -p prebuilds                                           &&
+tar -cf - genfatfs | gzip > prebuilds/$PLATFORM-$ARCH.tar.gz || exit 4
+
+#
+# Upload release to GitHub
+#
+
+if [ "$GITHUB_TOKEN" ]; then
+  prebuild --upload-all $GITHUB_TOKEN || exit 5
+fi

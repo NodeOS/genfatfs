@@ -1,0 +1,33 @@
+{
+  "name": "genfatfs",
+  "version": "1.0.0",
+  "description": "fat filesystem generator for embedded systems",
+  "bin": "genfatfs",
+  "main": "index.js",
+  "scripts": {
+    "BigRedButton": "scripts/BigRedButton",
+    "install": "prebuild --download https://github.com/NodeOS/nodeos-cross-toolchain/releases/download/v{version}/{platform}-{arch}.tar.gz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NodeOS/genfatfs.git"
+  },
+  "keywords": [
+    "fat",
+    "fatfs",
+    "vfat",
+    "fat32"
+  ],
+  "author": "Nathan Huizinga <nathan.huizinga@gmail.com>",
+  "contributors": [
+    "Jesús Leganés Combarro 'piranna' <piranna@gmail.com>"
+  ],
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/NodeOS/genfatfs/issues"
+  },
+  "homepage": "https://github.com/NodeOS/genfatfs#readme",
+  "dependencies": {
+    "prebuild": "piranna/prebuild"
+  }
+}
