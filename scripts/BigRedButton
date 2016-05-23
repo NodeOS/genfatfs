@@ -4,7 +4,7 @@
 # Build genfatfs
 #
 
-make || exit 1
+scripts/build || exit 1
 
 #
 # Pack genfatfs in a node-gyp compatible way
@@ -27,6 +27,8 @@ esac
 
 MACHINE="`uname -m`"
 case $MACHINE in
+  'i686') ARCH=ia32 ;;
+
   'x86_64') ARCH=x64 ;;
 
   *)
