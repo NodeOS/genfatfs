@@ -33,6 +33,6 @@
     "prebuild-install": "^2.1.0"
   },
   "devDependencies": {
-    "prebuild": "^6.0.0"
+    "prebuild": "^7.4.0"
   }
 }
