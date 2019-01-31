@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/NodeOS/genfatfs#readme",
   "dependencies": {
-    "prebuild-install": "^2.1.0"
+    "prebuild-install": "^5.2.3"
   },
   "devDependencies": {
     "prebuild": "^6.0.0"
